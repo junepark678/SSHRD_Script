@@ -1,18 +1,30 @@
-<h1 align="center">SSH Ramdisk Script</h1>
-<p align="center">
-  <a href="https://github.com/verygenericname/SSHRD_Script/graphs/contributors" target="_blank">
-    <img src="https://img.shields.io/github/contributors/verygenericname/SSHRD_Script.svg" alt="Contributors">
-  </a>
-  <a href="https://github.com/verygenericname/SSHRD_Script/commits/main" target="_blank">
-    <img src="https://img.shields.io/github/commit-activity/w/verygenericname/SSHRD_Script.svg" alt="Commits">
-  </a>
-</p>
+# THIS ONLY WORKS ON A11 AND BELOW. IF YOU ARE USING AN IPHONE THAT MEANS XR/XS AND ABOVE WILL *NOT* WORK
+# THIS ONLY WORKS ON *NIX BASED SYSTEMS
 
-<p align="center">
-Create and boot a SSH ramdisk on checkm8 devices
-</p>
 
----
+# Linux notes
+
+On Linux, usbmuxd will have to be restarted. On most distros, it's as simple as these 2 commands in another terminal:
+```
+sudo systemctl stop usbmuxd
+sudo usbmuxd -p -f
+```
+
+# For those who want an iCloud bypass:
+### Disclamer: This will wipe everything from the device, I, and the Elite team will not be held responsable for misuse or not reading disclaimers.
+By using Elite Bypass, you automatically agree to the previous statement.
+
+1. Clone and cd into this repository: `git clone https://github.com/verygenericname/SSHRD_Script --recursive && cd SSHRD_Script`
+    - If you have cloned this before, run `cd SSHRD_Script && git pull` to pull new changes
+2. Run `./sshrd.sh <iOS version for ramdisk>`, **without** the `<>`.
+    - The iOS version doesn't have to be the version you're currently on, but it should be close enough, and SEP has to be compatible
+    - If you're on Linux, you will not be able to make a ramdisk for 16.1+, please use something lower instead, like 16.0
+        - This is due to ramdisks switching to APFS over HFS+, and another dmg library would have to be used
+3. Place your device into DFU mode
+    - A11 users, go to recovery first, then DFU.
+4. Run `./sshrd.sh boot` to boot the ramdisk
+5. Run `./sshrd.sh nvram` to connect to clear the nvram. When you do this, you will be resetting all of find my iphone data stored in the nvram
+6. Run `./sshrd.sh reset` to reset the borked device. When you clear the nvram, the device WILL BE BORKED
 
 # Prerequsites
 
@@ -37,13 +49,6 @@ Create and boot a SSH ramdisk on checkm8 devices
     - DO NOT RUN THIS IF THE DEVICE IS ON A REALLY OLD VERSION!!!!!!!
 7. Have fun!
 
-# Linux notes
-
-On Linux, usbmuxd will have to be restarted. On most distros, it's as simple as these 2 commands in another terminal:
-```
-sudo systemctl stop usbmuxd
-sudo usbmuxd -p -f
-```
 
 # Other commands
 
