@@ -1,3 +1,6 @@
+## EliteBypass: A iCloud/FMI bypass for checkm8 devices
+[Join our Discord](https://discord.gg/jTwEYsyMaX) for more info/support
+
 # THIS ONLY WORKS ON A11 AND BELOW. IF YOU ARE USING AN IPHONE THAT MEANS XR/XS AND ABOVE WILL *NOT* WORK
 # THIS ONLY WORKS ON *NIX BASED SYSTEMS
 
@@ -57,12 +60,9 @@ By using Elite Bypass, you automatically agree to the previous statement.
 - Dump onboard SHSH blobs: `./sshrd.sh dump-blobs`
 - Delete old SSH ramdisk: `./sshrd.sh clean`
 
-# Other Stuff
-
-- [Reddit Post](https://www.reddit.com/r/jailbreak/comments/wgiye1/free_release_ssh_ramdisk_creator_for_iphones_ipad/)
-
 # Credits
 
+- [Nathan](https://github.com/verygenericname) for original code
 - [tihmstar](https://github.com/tihmstar) for pzb/original iBoot64Patcher/img4tool
 - [xerub](https://github.com/xerub) for img4lib and restored_external in the ramdisk
 - [Cryptic](https://github.com/Cryptiiiic) for iBoot64Patcher fork
