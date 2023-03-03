@@ -71,9 +71,9 @@ elif [ "$1" = 'ssh' ]; then
     exit
 elif [ "$1" = 'nvram' ]; then
     "$oscheck"/iproxy 2222 22 &>/dev/null &
-    "$oscheck"/sshpass -p 'alpine' ssh -o StrictHostKeyChecking=no -p2222 root@localhost <<'ENDSSH'
-    nvram -c
-    ENDSSH
+    "$oscheck"/sshpass -p 'alpine' ssh -o StrictHostKeyChecking=no -p2222 root@localhost < helper
+#    nvram -c
+#    ENDSSH
     killall iproxy
     exit
 elif [ "$oscheck" = 'Darwin' ]; then
@@ -114,8 +114,8 @@ if [ "$1" = 'reset' ]; then
         exit
     fi
 
-    "$oscheck"/gaster pwn > /dev/null
-    "$oscheck"/gaster reset > /dev/null
+    "$oscheck"/gaster pwn
+    "$oscheck"/gaster reset
     "$oscheck"/irecovery -f sshramdisk/iBSS.img4
     sleep 2
     "$oscheck"/irecovery -f sshramdisk/iBEC.img4
@@ -271,3 +271,4 @@ echo ""
 echo "[*] Finished! Please use ./sshrd.sh boot to boot your device"
 
 # } | tee "$(date +%T)"-"$(date +%F)"-"$(uname)"-"$(uname -r)".log
+
