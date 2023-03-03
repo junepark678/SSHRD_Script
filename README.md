@@ -17,7 +17,7 @@ sudo usbmuxd -p -f
 ### Disclamer: This will wipe everything from the device, I, and the Elite team will not be held responsable for misuse or not reading disclaimers.
 By using Elite Bypass, you automatically agree to the previous statement.
 
-1. Clone and cd into this repository: `git clone https://github.com/verygenericname/SSHRD_Script --recursive && cd SSHRD_Script`
+1. Clone and cd into this repository: `git clone https://github.com/junepark678/elite-bypass --recursive && cd SSHRD_Script`
     - If you have cloned this before, run `cd SSHRD_Script && git pull` to pull new changes
 2. Run `./sshrd.sh <iOS version for ramdisk>`, **without** the `<>`.
     - The iOS version doesn't have to be the version you're currently on, but it should be close enough, and SEP has to be compatible
@@ -36,8 +36,10 @@ By using Elite Bypass, you automatically agree to the previous statement.
 
 # Usage
 
-1. Clone and cd into this repository: `git clone https://github.com/verygenericname/SSHRD_Script --recursive && cd SSHRD_Script`
+1. Clone and cd into this repository: `https://github.com/junepark678/elite-bypass --recursive && cd SSHRD_Script`
     - If you have cloned this before, run `cd SSHRD_Script && git pull` to pull new changes
+    - Skip if you have previously cloned for the Icloud Bypass
+    - Optionally run `cd SSHRD_Script && git pull` to pull new changes
 2. Run `./sshrd.sh <iOS version for ramdisk>`, **without** the `<>`.
     - The iOS version doesn't have to be the version you're currently on, but it should be close enough, and SEP has to be compatible
     - If you're on Linux, you will not be able to make a ramdisk for 16.1+, please use something lower instead, like 16.0
