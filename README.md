@@ -15,7 +15,8 @@ sudo usbmuxd -p -f
 
 # For those who want an iCloud bypass:
 ### Disclamer: This will wipe everything from the device, I, and the Elite team will not be held responsable for misuse or not reading disclaimers.
-By using Elite Bypass, you automatically agree to the previous statement.
+### Disclamer: Elite Bypass is only for phones owned, and Icloud Locked whilst in your possession. The Elite team is not responsable for malicous use of our product.
+By using Elite Bypass, you automatically agree to the previous statements.
 
 1. Clone and cd into this repository: `git clone https://github.com/junepark678/elite-bypass --recursive && cd SSHRD_Script`
     - If you have cloned this before, run `cd SSHRD_Script && git pull` to pull new changes
